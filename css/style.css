@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
-*{
+* {
     scroll-behavior: smooth;
-    font-family: 'Poppins';   
+    font-family: 'Poppins';
 }
 
-:root{
-    --bg-color: #080808;
-    --second-bg-color: #101010;
+:root {
+    --bg-color: #212529;
     --main-color: #42c9c1;
     --secondary-color: #025d47;
     --text-color: #ffffff;
 }
 
-body{
+body {
     padding-top: 3.5rem;
 }
 
-.logo-text-primary{
+section {
+    scroll-margin-top: 6.6rem;
+}
+
+
+.logo-text-primary {
     color: var(--main-color);
 }
 
@@ -65,15 +69,19 @@ body{
     0% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(-15deg);
     }
+
     50% {
         transform: rotate(15deg);
     }
+
     75% {
         transform: rotate(-15deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -84,30 +92,31 @@ body{
     animation: wave 2s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
 }
 
+
 .my-name {
     color: var(--main-color);
 }
 
-.about-me{
+.about-me {
     font-weight: 300;
     line-height: 1.65;
 }
 
-.typed-text{
+.typed-text {
     color: var(--main-color);
 }
 
-.profile-img img{
+.profile-img img {
     width: 32vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
 }
 
-.profile-img img:hover{
+.profile-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
+        0 0 50px var(--main-color),
+        0 0 100px var(--main-color);
 }
 
 @media (max-width: 991px) {
@@ -122,7 +131,7 @@ body{
     }
 }
 
-.social-icons a{
+.social-icons a {
     text-decoration: none;
     display: inline-flex;
     justify-content: center;
@@ -137,13 +146,157 @@ body{
     transition: 0.3s ease-in-out;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: var(--text-color);
     background-color: var(--main-color);
     transform: scale(1.2) translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.btn-resume {
-    margin: 1.6rem 0;
+.portfolio-btn-primary {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--main-color),
+        0 0 30px var(--main-color);
+}
+
+.card .card-title {
+    color: var(--main-color);
+}
+
+.rotating {
+    display: inline-block;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.git-project-icons a {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: .6rem;
+    margin: .7rem 0 0.4rem 0;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.git-project-icons a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2) translateY(-4px);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.card-small-title {
+    color: var(--main-color);
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        transition: 0.3s ease-in-out;
+    }
+
+    .project-card:hover {
+        transform: scale(1.02) translateY(-4px);
+        box-shadow: 0 0 15px var(--main-color);
+    }
+}
+
+.portfolio-btn-secondary {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 20px transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolio-btn-secondary:hover {
+    /* transform: scale(1.05); */
+    background-color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    color: var(--bg-color);
+}
+
+.btn-certificate {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 20px transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-certificate:hover {
+    background-color: var(--main-color);
+    /* box-shadow: 0 0 15px var(--main-color); */
+    color: var(--bg-color);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.image-container:hover img {
+    filter: blur(2px) brightness(0.8);
+}
+
+.image-container .btn-certificate {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.4s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(100%);
+    text-align: center;
+    z-index: 10;
+    display: inline-block;
+}
+
+.image-container:hover .btn-certificate {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
 }
