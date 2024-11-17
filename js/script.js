@@ -40,3 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+ // Get the current year and set it in the year element
+ document.getElementById("year").textContent = new Date().getFullYear();

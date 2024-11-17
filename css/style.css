@@ -300,3 +300,120 @@ section {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0);
 }
+
+.icon-row {
+    gap: 10px;
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid rgba(60,201,193,0.3); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto;
+    background: var(--bg-color);
+}
+
+.icon-wrapper svg {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.icon {
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .icon-wrapper {
+        width: 85px;
+        height: 85px;
+    }
+
+    .icon-wrapper svg {
+        width: 51%;
+        height: 51%;
+    }
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.icon-wrapper::after,
+.icon-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    background-image: conic-gradient(from var(--angle), transparent 75%, var(--main-color));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 50%;
+    animation: 3s spin linear infinite;
+}
+
+.icon-wrapper::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg
+    }
+}
+
+.footer{
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer-addressing{
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.send-icon {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    display: inline-block;
+    animation: moveSendIcon 3s ease-in-out infinite;
+}
+
+@keyframes moveSendIcon {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(25px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}
+
+.footer-icon{
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin-right: 1.2rem;
+}
+
+.copyright{
+    font-size: 0.925rem;
+}
