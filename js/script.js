@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all the nav links and sections
+    // Select all the nav links, nav brand and sections
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarBrand = document.querySelector('.navbar-brand');
     const sections = document.querySelectorAll('section');
 
     // Function to remove active class from all nav links
@@ -39,7 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Click event listener for collapsing navbar on navbar brand click
+    navbarBrand.addEventListener('click', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    });
 });
 
- // Get the current year and set it in the year element
- document.getElementById("year").textContent = new Date().getFullYear();
+// Get the current year and set it in the year element
+document.getElementById("year").textContent = new Date().getFullYear();
