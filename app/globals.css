@@ -13,6 +13,7 @@
   --accent: rgb(0, 204, 178);
   --accent-foreground: rgb(1, 1, 2);
   --radius: 0.5rem;
+  --border: rgb(26, 26, 29);
 }
 
 
@@ -25,8 +26,7 @@
 /* Base styles */
 @layer base {
   body {
-    background-color: var(--background);
-    color: var(--foreground);
+    @apply bg-(--background) text-(--foreground);
   }
 }
 
