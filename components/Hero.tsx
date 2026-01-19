@@ -84,6 +84,15 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-20">
+          <Link
+            href="#experience"
+            className="animate-bounce p-2 text-(--muted-foreground) hover:text-(--foreground) transition-colors"
+            aria-label="Scroll down"
+          >
+            <Icon icon="lucide:arrow-down" className="w-6 h-6" />
+          </Link>
+        </div>
       </div>
     </section>
   );
