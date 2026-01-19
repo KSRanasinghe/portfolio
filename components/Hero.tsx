@@ -1,6 +1,13 @@
 "use client";
 
+import { Icon } from "@iconify/react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
+
+const WordRoller = dynamic(() => import('@/components/animations/WordRoller'), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (
@@ -9,7 +16,12 @@ export default function Hero() {
         <div className="grid xl:grid-cols-2 gap-14 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="text-sm font-mono text-(--accent) tracking-wider mb-0 uppercase">Web Developer</p>
+              <div className="text-sm font-mono text-(--accent) tracking-wider mb-0 uppercase">
+                <WordRoller
+                  items={["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer", "UI Enthusiast"]}
+                  interval={4000}
+                />
+              </div>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">Keshara Ranasinghe</h1>
               <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-linear-to-r from-(--muted-foreground) via-(--foreground) to-(--muted-foreground) leading-relaxed">
                 Transforming complex requirements into seamless, high-performance web interfaces.
@@ -29,6 +41,46 @@ export default function Hero() {
               >
                 View Work
               </Link>
+            </div>
+            <div className="flex items-center gap-4 pt-1">
+              <Link
+                href="https://github.com/KSRanasinghe"
+                target="_blank"
+                className="p-3 text-(--muted-foreground) hover:text-(--foreground) hover:bg-(--secondary)/50 rounded-lg transition-all duration-200"
+                aria-label="GitHub"
+              >
+                <Icon icon="simple-icons:github" className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/keshara-ranasinghe-20m08/"
+                target="_blank"
+                className="p-3 text-(--muted-foreground) hover:text-(--foreground) hover:bg-(--secondary)/50 rounded-lg transition-all duration-200"
+                aria-label="LinkedIn"
+              >
+                <Icon icon="simple-icons:linkedin" className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="relative group">
+
+              <div className="absolute inset-0 bg-linear-to-br from-(--accent)/30 to-blue-500/10 rounded-full blur-[100px] opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+
+              <div className="relative w-[600px] h-[600px] rounded-full border border-(--border)/40 bg-linear-to-b from-(--secondary)/80 to-card/90 shadow-2xl flex items-end justify-center overflow-hidden">
+
+                <div className="relative w-[130%] h-[130%] -bottom-8 z-10">
+                  <Image
+                    src="/hero-1.avif"
+                    alt="Keshara Ranasinghe"
+                    fill
+                    priority
+                    className="object-contain object-bottom transition-transform duration-500 scale-[1.3]"
+                    sizes="600px"
+                  />
+                </div>
+
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-(--accent)/5 rounded-full blur-3xl" />
+              </div>
             </div>
           </div>
         </div>
