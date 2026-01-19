@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-semibold hover:text-(--accent) transition-colors"
+          className="text-lg font-semibold hover:text-(--accent) accent-text transition-colors"
         >
           KR
         </Link>
