@@ -22,7 +22,7 @@ export default function Hero() {
                   interval={4000}
                 />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">Keshara Ranasinghe</h1>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-(--primary)">Keshara Ranasinghe</h1>
               <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-linear-to-r from-(--muted-foreground) via-(--foreground) to-(--muted-foreground) leading-relaxed">
                 Transforming complex requirements into seamless, high-performance web interfaces.
               </p>

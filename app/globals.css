@@ -14,6 +14,8 @@
   --accent-foreground: rgb(1, 1, 2);
   --radius: 0.5rem;
   --border: rgb(26, 26, 29);
+  --card: rgb(6, 6, 7);
+  --card-foreground: rgb(238, 238, 238);
 }
 
 
