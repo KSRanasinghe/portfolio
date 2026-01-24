@@ -31,8 +31,8 @@ export default function Experience() {
     <section id="experience" className="min-h-screen w-full py-32 px-4">
       <div className="xl:max-w-5xl 2xl:max-w-7xl w-full mx-auto">
         <div className="space-y-4 mb-14 text-center">
-          <p className="font-mono text-sm text-(--accent) accent-text tracking-wider uppercase">Career Path</p>
-          <h2 className="text-xl md:text-6xl font-inter text-(--primary) font-bold tracking-tight">Experience</h2>
+          <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Career Path</p>
+          <h2 className="text-xl md:text-6xl font-inter text-primary font-bold tracking-tight">Experience</h2>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
           <div className="hidden xl:flex xl:col-span-5 accent-text">
@@ -45,39 +45,39 @@ export default function Experience() {
           </div>
           <div className="col-span-full xl:col-span-7 relative">
             {/* timeline line */}
-            <div className="absolute top-0 bottom-0 left-6.75 w-px bg-(--border)"></div>
+            <div className="absolute top-0 bottom-0 left-6.75 w-px bg-border"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative pl-18 group">
                   {/* Timeline dot */}
-                  <div className="absolute left-0 top-2 w-14 h-14 rounded-xl bg-(--card) border border-(--border) flex items-center justify-center text-lg font-semibold text-(--muted-foreground) group-hover:border-(--accent)/50 group-hover:text-(--accent) accent-text transition-all duration-300">
+                  <div className="absolute left-0 top-2 w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center text-lg font-semibold text-muted-foreground group-hover:border-(--accent)/50 group-hover:text-accent accent-text transition-all duration-300">
                     {exp.logo}
                   </div>
 
                   <div className="space-y-4 pt-2">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <div>
-                        <h3 className="text-xl font-semibold text-(--foreground) group-hover:text-(--accent) accent-text transition-colors">
+                        <h3 className="text-xl font-semibold text-foreground group-hover:text-accent accent-text transition-colors">
                           {exp.role}
                         </h3>
                         <Link
                           href="https://dimensions-it.com/"
-                          className="inline-flex items-center gap-1 text-(--muted-foreground) hover:text-(--foreground) transition-colors"
+                          className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
                           target="_blank" rel="noopener noreferrer"
                         >
                           {exp.company}
                           <Icon icon="lucide:external-link" className="w-3 h-3"/>
                         </Link>
                       </div>
-                      <span className="text-sm text-(--muted-foreground) font-mono">{exp.period}</span>
+                      <span className="text-sm text-muted-foreground font-mono">{exp.period}</span>
                     </div>
-                    <p className="text-(--muted-foreground) leading-relaxed">{exp.description}</p>
+                    <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 text-xs font-medium bg-(--secondary) text-(--secondary-foreground) rounded-full"
+                          className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
                         >
                           {tech}
                         </span>

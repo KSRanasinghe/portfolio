@@ -25,14 +25,14 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-(--background)/60 backdrop-blur-xl border-b border-(--border)/60 " : "bg-transparent border-(--border)/60"
+        ? "bg-background/60 backdrop-blur-xl border-b border-border/60 " : "bg-transparent border-border/60"
         }`}
     >
       <div className="xl:max-w-5xl 2xl:max-w-7xl mx-auto px-4 py-4 flex items-center justify-between font-inter">
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-semibold hover:text-(--accent) accent-text transition-colors"
+          className="text-lg font-semibold hover:text-accent accent-text transition-colors"
         >
           KR
         </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-(--muted-foreground) hover:text-(--foreground) transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href="#contact"
-          className="px-4 py-2 text-sm font-medium rounded-lg bg-(--primary) text-(--primary-foreground) hover:bg-(--foreground)/90 transition-colors"
+          className="px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-foreground/90 transition-colors"
         >
           Get in touch
         </Link>
