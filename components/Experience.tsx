@@ -1,8 +1,8 @@
 "use client";
 
 import { DotLottiePlayer } from "@dotlottie/react-player";
-import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { FaLink } from "react-icons/fa";
 
 const experiences = [
   {
@@ -67,7 +67,7 @@ export default function Experience() {
                           target="_blank" rel="noopener noreferrer"
                         >
                           {exp.company}
-                          <Icon icon="lucide:external-link" className="w-3 h-3"/>
+                          <FaLink className="w-3 h-3"/>
                         </Link>
                       </div>
                       <span className="text-sm text-muted-foreground font-mono">{exp.period}</span>

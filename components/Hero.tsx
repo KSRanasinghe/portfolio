@@ -1,9 +1,9 @@
 "use client";
 
-import { Icon } from "@iconify/react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowDown, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const WordRoller = dynamic(() => import('@/components/animations/WordRoller'), {
   ssr: false,
@@ -49,7 +49,7 @@ export default function Hero() {
                 className="p-3 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg transition-all duration-200"
                 aria-label="GitHub"
               >
-                <Icon icon="simple-icons:github" className="w-5 h-5" />
+                <FaGithub className="w-5 h-5"/>
               </Link>
               <Link
                 href="https://www.linkedin.com/in/keshara-ranasinghe-20m08/"
@@ -57,7 +57,7 @@ export default function Hero() {
                 className="p-3 text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-lg transition-all duration-200"
                 aria-label="LinkedIn"
               >
-                <Icon icon="simple-icons:linkedin" className="w-5 h-5" />
+                <FaLinkedin className="w-5 h-5"/>
               </Link>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function Hero() {
             className="animate-bounce p-2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Scroll down"
           >
-            <Icon icon="lucide:arrow-down" className="w-6 h-6" />
+            <FaArrowDown className="w-5 h-5"/>
           </Link>
         </div>
       </div>
