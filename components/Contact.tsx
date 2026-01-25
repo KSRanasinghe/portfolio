@@ -12,6 +12,18 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.warning("Please fill in all fields before sending.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
     setIsSending(true);
 
     const promise = sendEmail(formData);
@@ -82,6 +94,7 @@ export default function Contact() {
                   onBlur={() => setFocused(null)}
                   className="peer w-full px-4 pt-6 pb-2 bg-card border border-border rounded-lg text-foreground placeholder-transparent focus:border-accent focus:outline-none transition-colors"
                   placeholder="Name"
+                  required
                 />
                 <label
                   htmlFor="name"
@@ -102,6 +115,7 @@ export default function Contact() {
                   onBlur={() => setFocused(null)}
                   className="peer w-full px-4 pt-6 pb-2 bg-card border border-border rounded-lg text-foreground placeholder-transparent focus:border-accent focus:outline-none transition-colors"
                   placeholder="Email"
+                  required
                 />
                 <label
                   htmlFor="email"
@@ -123,6 +137,7 @@ export default function Contact() {
                 onBlur={() => setFocused(null)}
                 className="peer w-full px-4 pt-6 pb-2 bg-card border border-border rounded-lg text-foreground placeholder-transparent focus:border-accent focus:outline-none transition-colors resize-none"
                 placeholder="Message"
+                required
               />
               <label
                 htmlFor="message"
