@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="xl:max-w-5xl 2xl:max-w-7xl w-full mx-auto">
         <div className="grid xl:grid-cols-2 gap-14 items-center">
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-4 lg:pr-5">
               <div className="text-sm font-mono text-accent accent-text tracking-wider mb-0 uppercase">
                 <WordRoller
                   items={["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer", "UI Enthusiast"]}
