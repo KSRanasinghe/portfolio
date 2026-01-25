@@ -55,7 +55,7 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className={`fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-9999 ${
+      className={`fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-999999 ${
         isOverSpecial ? "" : "mix-blend-difference"
       }`}
       style={{

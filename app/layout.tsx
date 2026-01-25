@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/ui/CustomCursor";
 import { Toaster } from "sonner";
+import BackToTop from "@/components/ui/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         <CustomCursor />
         <Navbar />
         {children}
+        <BackToTop/>
         <Toaster position="bottom-right" richColors />
       </body>
     </html>
