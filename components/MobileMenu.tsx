@@ -8,10 +8,11 @@ import { IoClose } from "react-icons/io5";
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  navLinks: { href: string; label: string }[];
+  navLinks: { href: string; id:string; label: string; }[];
+  activeSection: string;
 }
 
-const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
+const MobileMenu = ({ isOpen, onClose, navLinks, activeSection }: MobileMenuProps) => {
   const sidebarRef = useRef(null);
   const backdropRef = useRef(null);
 
@@ -52,12 +53,15 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-lg transition-colors ${activeSection === link.id
+                ? "text-primary font-bold"
+                : "text-muted-foreground hover:text-foreground"
+                }`}
             >
               {link.label}
             </Link>
           ))}
-          
+
           {/* CTA Button in Sidebar */}
           <Link
             href="#contact"

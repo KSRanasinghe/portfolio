@@ -6,23 +6,47 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#education", label: "Education" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", id: "about", label: "About" },
+  { href: "#experience", id: "experience", label: "Experience" },
+  { href: "#education", id: "education", label: "Education" },
+  { href: "#skills", id: "skills", label: "Skills" },
+  { href: "#contact", id: "contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    navLinks.forEach((link) => {
+      const element = document.getElementById(link.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -47,7 +71,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm transition-colors ${activeSection === link.id
+                    ? "text-primary font-bold"
+                    : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -75,6 +102,7 @@ export default function Navbar() {
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         navLinks={navLinks}
+        activeSection={activeSection}
       />
     </>
   );
