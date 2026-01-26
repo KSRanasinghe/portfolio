@@ -28,7 +28,7 @@ export default function Navbar() {
         ? "bg-background/60 backdrop-blur-xl border-b border-border/60 " : "bg-transparent border-border/60"
         }`}
     >
-      <div className="xl:max-w-5xl 2xl:max-w-7xl mx-auto px-4 py-4 flex items-center justify-between font-inter">
+      <div className="xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-10 xl:px-4 py-4 flex items-center justify-between font-inter">
         {/* Logo */}
         <Link
           href="/"

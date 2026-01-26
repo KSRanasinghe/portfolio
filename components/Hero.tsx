@@ -11,38 +11,38 @@ const WordRoller = dynamic(() => import('@/components/animations/WordRoller'), {
 
 export default function Hero() {
   return (
-    <section id="about" className="min-h-screen w-full flex items-center justify-center pt-20 px-4">
-      <div className="xl:max-w-5xl 2xl:max-w-7xl w-full mx-auto">
-        <div className="grid xl:grid-cols-2 gap-14 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4 lg:pr-5">
-              <div className="text-sm font-mono text-accent accent-text tracking-wider mb-0 uppercase">
+    <section id="about" className="lg:min-h-screen w-full flex items-start lg:items-center justify-center pt-25 md:pt-35 px-4 md:px-10 xl:px-4">
+      <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
+        <div className="grid xl:grid-cols-12 gap-16 items-center">
+          <div className="xl:col-span-6 space-y-5 md:space-y-8">
+            <div className="space-y-4 xl:pr-5">
+              <div className="text-sm font-mono text-accent accent-text tracking-wider uppercase mb-0">
                 <WordRoller
                   items={["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer", "UI Enthusiast"]}
                   interval={4000}
                 />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-primary">Keshara Ranasinghe</h1>
-              <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-linear-to-r from-muted-foreground via-foreground to-muted-foreground leading-relaxed">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-primary text-center md:text-left">Keshara Ranasinghe</h1>
+              <p className="text-lg md:text-xl xl:text-2xl text-transparent bg-clip-text bg-linear-to-r from-muted-foreground via-foreground to-muted-foreground leading-relaxed text-center md:text-left">
                 Transforming complex requirements into seamless, high-performance web interfaces.
               </p>
             </div>
-            <p className="text-muted-foreground text-xl leading-relaxed">I&apos;m a Web Developer with a year of industry experience in building end-to-end solutions. I bridge the gap between clean, intuitive design and functional backend logic, ensuring every line of code is optimized for performance. Currently evolving my craft within the modern JavaScript ecosystem and looking for my next challenge as an Associate Software Engineer.</p>
-            <div className="flex items-center gap-6">
+            <p className="text-muted-foreground text-[16px] md:text-xl leading-relaxed 2xl:pr-3 text-center md:text-left">I&apos;m a Web Developer with a year of industry experience building end-to-end solutions. I bridge clean, intuitive design with solid backend logic to deliver performance-optimized code. Currently deepening my skills in the modern JavaScript ecosystem and seeking my next challenge as an Associate Software Engineer.</p>
+            <div className="flex items-center justify-center md:justify-start gap-4 md:gap-6">
               <Link
                 href="#contact"
-                className="group relative px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+                className="group relative px-5 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
               >
                 <span className="relative z-10">Let&apos;s Connect</span>
               </Link>
               <Link
                 href="#experience"
-                className="px-8 py-4 border border-primary/40 text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-300"
+                className="px-5 py-3 md:px-8 md:py-4 border border-primary/40 text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-300"
               >
                 View Work
               </Link>
             </div>
-            <div className="flex items-center gap-4 pt-1">
+            <div className="flex items-center justify-center md:justify-start gap-4 pt-1">
               <Link
                 href="https://github.com/KSRanasinghe"
                 target="_blank"
@@ -61,10 +61,10 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:flex items-center justify-center">
+          <div className="hidden xl:flex xl:col-span-6 items-center justify-center">
             <div className="relative group">
 
-              <div className="absolute inset-0 bg-linear-to-br from-(--accent)/30 to-blue-500/10 rounded-full blur-[100px] opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-br from-accent/30 to-blue-500/10 rounded-full blur-[100px] opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
 
               <div className="relative w-150 h-150 rounded-full border border-border/40 bg-linear-to-b from-secondary/80 to-card/90 shadow-2xl flex items-end justify-center overflow-hidden">
 
@@ -84,7 +84,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-10 xl:mt-20">
           <Link
             href="#experience"
             className="animate-bounce p-2 text-muted-foreground hover:text-foreground transition-colors"

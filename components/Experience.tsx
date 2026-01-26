@@ -28,11 +28,11 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="min-h-screen w-full py-32 px-4">
-      <div className="xl:max-w-5xl 2xl:max-w-7xl w-full mx-auto">
-        <div className="space-y-4 mb-14 text-center">
+    <section id="experience" className="w-full py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4">
+      <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
+        <div className="space-y-4 mb-10 md:mb-14 text-center">
           <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Career Path</p>
-          <h2 className="text-xl md:text-6xl font-inter text-primary font-bold tracking-tight">Experience</h2>
+          <h2 className="text-2xl md:text-6xl font-inter text-primary font-bold tracking-tight">Experience</h2>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
           <div className="hidden xl:flex xl:col-span-5 accent-text">

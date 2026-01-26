@@ -43,15 +43,15 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 px-4 bg-card/30">
+    <section id="contact" className="py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4 bg-card/30">
       <div className="xl:max-w-5xl 2xl:max-w-7xl w-full mx-auto">
         <div className="space-y-4 mb-16 text-center">
           <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Get in Touch</p>
-          <h2 className="text-xl md:text-6xl font-inter text-primary font-bold tracking-tight mb-5">Let&apos;s Work Together</h2>
+          <h2 className="text-2xl md:text-6xl font-inter text-primary font-bold tracking-tight mb-5">Let&apos;s Work Together</h2>
           <p className="text-lg text-muted-foreground font-inter leading-relaxed tracking-normal max-w-xl mx-auto">I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-5 gap-14">
-          <div className="xl:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-14">
+          <div className="lg:col-span-2">
             <div className="space-y-8">
               <div className="flex items-center gap-4 group">
                 <div className="p-3 border border-border rounded-lg group-hover:border-accent/50 transition-colors">
@@ -82,8 +82,8 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="lg:col-span-3 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 accent-text">
+          <form onSubmit={handleSubmit} className="lg:col-span-3 space-y-4 md:space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 accent-text">
               <div className="relative">
                 <input
                   type="text"

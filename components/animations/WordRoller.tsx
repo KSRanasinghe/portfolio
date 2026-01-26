@@ -50,7 +50,7 @@ export default function WordRoller({ items, interval = 5000 }: WordRollerProps) 
 
   return (
     <div className="relative h-[1.5em] overflow-hidden">
-      <div ref={containerRef} className="flex">
+      <div ref={containerRef} className="flex justify-center md:justify-start">
         {items[index].split("").map((char, i) => (
           <span
             key={`${index}-${i}`}
