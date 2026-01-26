@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { HiMenuAlt3 } from "react-icons/hi";
+import MobileMenu from "./MobileMenu";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -13,6 +15,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,41 +26,56 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-background/60 backdrop-blur-xl border-b border-border/60 " : "bg-transparent border-border/60"
-        }`}
-    >
-      <div className="xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-10 xl:px-4 py-4 flex items-center justify-between font-inter">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="text-lg font-semibold hover:text-accent accent-text transition-colors"
-        >
-          KR
-        </Link>
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-background/60 backdrop-blur-xl border-b border-border/60 " : "bg-transparent border-border/60"
+          }`}
+      >
+        <div className="xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-10 xl:px-4 py-4 flex items-center justify-between font-inter">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="text-lg font-semibold hover:text-accent accent-text transition-colors"
+          >
+            KR
+          </Link>
 
-        {/* Links */}
-        <div className="hidden md:flex items-center gap-9">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {/* Links */}
+          <div className="hidden md:flex items-center gap-9">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <Link
+            href="#contact"
+            className="hidden md:flex px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-foreground/90 transition-colors"
+          >
+            Get in touch
+          </Link>
+
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden text-2xl text-foreground p-1"
+          >
+            <HiMenuAlt3 />
+          </button>
         </div>
+      </nav>
 
-        {/* CTA */}
-        <Link
-          href="#contact"
-          className="px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-foreground/90 transition-colors"
-        >
-          Get in touch
-        </Link>
-      </div>
-    </nav>
+      <MobileMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        navLinks={navLinks}
+      />
+    </>
   );
 }
