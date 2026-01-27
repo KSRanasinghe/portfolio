@@ -1,0 +1,109 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { HiMenuAlt3 } from "react-icons/hi";
+import MobileMenu from "./MobileMenu";
+
+const navLinks = [
+  { href: "#about", id: "about", label: "About" },
+  { href: "#experience", id: "experience", label: "Experience" },
+  { href: "#education", id: "education", label: "Education" },
+  { href: "#skills", id: "skills", label: "Skills" },
+  { href: "#contact", id: "contact", label: "Contact" },
+];
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    window.addEventListener("scroll", onScroll);
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    navLinks.forEach((link) => {
+      const element = document.getElementById(link.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-background/60 backdrop-blur-xl border-b border-border/60 " : "bg-transparent border-border/60"
+          }`}
+      >
+        <div className="xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-10 xl:px-4 py-4 flex items-center justify-between font-inter">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="text-lg font-semibold hover:text-accent accent-text transition-colors"
+          >
+            KR
+          </Link>
+
+          {/* Links */}
+          <div className="hidden md:flex items-center gap-9">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm transition-colors ${activeSection === link.id
+                    ? "text-primary font-bold"
+                    : "text-muted-foreground hover:text-foreground"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <Link
+            href="#contact"
+            className="hidden md:flex px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-foreground/90 transition-colors"
+          >
+            Get in touch
+          </Link>
+
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden text-2xl text-foreground p-1"
+          >
+            <HiMenuAlt3 />
+          </button>
+        </div>
+      </nav>
+
+      <MobileMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        navLinks={navLinks}
+        activeSection={activeSection}
+      />
+    </>
+  );
+}
