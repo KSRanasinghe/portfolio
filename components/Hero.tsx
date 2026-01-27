@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="space-y-4 xl:pr-5">
               <div className="text-sm font-mono text-accent accent-text tracking-wider uppercase mb-0">
                 <WordRoller
-                  items={["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer", "UI Enthusiast"]}
+                  items={["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer", "UI?UX Enthusiast"]}
                   interval={4000}
                 />
               </div>
