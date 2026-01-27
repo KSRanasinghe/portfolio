@@ -22,13 +22,13 @@ export default function Hero() {
                   interval={4000}
                 />
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-primary text-center md:text-left">Keshara Ranasinghe</h1>
-              <p className="text-lg md:text-xl xl:text-2xl text-transparent bg-clip-text bg-linear-to-r from-muted-foreground via-foreground to-muted-foreground leading-relaxed text-center md:text-left">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-primary text-center md:text-left hero-reveal">Keshara Ranasinghe</h1>
+              <p className="text-lg md:text-xl xl:text-2xl text-transparent bg-clip-text bg-linear-to-r from-muted-foreground via-foreground to-muted-foreground leading-relaxed text-center md:text-left hero-reveal">
                 Transforming complex requirements into seamless, high-performance web interfaces.
               </p>
             </div>
-            <p className="text-muted-foreground text-[16px] md:text-xl leading-relaxed 2xl:pr-3 text-center md:text-left">I&apos;m a Web Developer with a year of industry experience building end-to-end solutions. I bridge clean, intuitive design with solid backend logic to deliver performance-optimized code. Currently deepening my skills in the modern JavaScript ecosystem and seeking my next challenge as an Associate Software Engineer.</p>
-            <div className="flex items-center justify-center md:justify-start gap-4 md:gap-6">
+            <p className="text-muted-foreground text-[16px] md:text-xl leading-relaxed 2xl:pr-3 text-center md:text-left hero-reveal">I&apos;m a Web Developer with a year of industry experience building end-to-end solutions. I bridge clean, intuitive design with solid backend logic to deliver performance-optimized code. Currently deepening my skills in the modern JavaScript ecosystem and seeking my next challenge as an Associate Software Engineer.</p>
+            <div className="flex items-center justify-center md:justify-start gap-4 md:gap-6 hero-reveal">
               <Link
                 href="#contact"
                 className="group relative px-5 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
@@ -42,7 +42,7 @@ export default function Hero() {
                 View Work
               </Link>
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-4 pt-1">
+            <div className="flex items-center justify-center md:justify-start gap-4 pt-1 hero-reveal">
               <Link
                 href="https://github.com/KSRanasinghe"
                 target="_blank"

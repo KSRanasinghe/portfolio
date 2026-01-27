@@ -30,17 +30,17 @@ export default function Education() {
   return (
     <section id="education" className="py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4 bg-card/30">
       <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
-        <div className="space-y-4 mb-14 text-center">
+        <div className="space-y-4 mb-14 text-center reveal-down">
           <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Academic Background</p>
           <h2 className="text-2xl md:text-6xl font-inter text-primary font-bold tracking-tight">Education</h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 reveal-stagger">
           {education.map((edu, index) => {
             const Icon = edu.icon
             return (
               <div
                 key={index}
-                className="group relative p-8 bg-card border border-border rounded-xl hover:border-accent/30 hover:-translate-y-1 transition-all duration-300"
+                className="group relative p-8 bg-card border border-border rounded-xl hover:border-accent/30 transition-colors duration-300"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300" />
                 <div className="relative space-y-4">

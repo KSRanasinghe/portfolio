@@ -47,7 +47,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4">
       <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
-        <div className="space-y-4 mb-14 text-center">
+        <div className="space-y-4 mb-14 text-center reveal-down">
           <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Technical Expertise</p>
           <h2 className="text-2xl md:text-6xl font-inter text-primary font-bold tracking-tight">Tech Stack</h2>
         </div>

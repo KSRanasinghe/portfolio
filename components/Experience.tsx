@@ -30,7 +30,7 @@ export default function Experience() {
   return (
     <section id="experience" className="w-full py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4">
       <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
-        <div className="space-y-4 mb-10 md:mb-14 text-center">
+        <div className="space-y-4 mb-10 md:mb-14 text-center reveal-down">
           <p className="font-mono text-sm text-accent accent-text tracking-wider uppercase">Career Path</p>
           <h2 className="text-2xl md:text-6xl font-inter text-primary font-bold tracking-tight">Experience</h2>
         </div>
@@ -49,7 +49,7 @@ export default function Experience() {
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
-                <div key={index} className="relative pl-18 group">
+                <div key={index} className="relative pl-18 group reveal-stagger">
                   {/* Timeline dot */}
                   <div className="absolute left-0 top-2 w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center text-lg font-semibold text-muted-foreground group-hover:border-(--accent)/50 group-hover:text-accent accent-text transition-all duration-300">
                     {exp.logo}
