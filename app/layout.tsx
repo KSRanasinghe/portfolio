@@ -17,10 +17,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_PATH
+      ? "https://ksranasinghe.github.io/portfolio"
+      : "http://localhost:3000"
+  ),
+
   title: "Keshara Ranasinghe | Web Developer | Portfolio",
-  description: "Passionate Web Developer with 1 year of industry experience in building high-performance, end-to-end web solutions. Currently seeking my next challenge as an Associate Software Engineer.",
-  keywords: ["Web Developer", "Associate Software Engineer", "Next.js", "React", "Portfolio"],
+  description:
+    "Passionate Web Developer with 1 year of industry experience in building high-performance, end-to-end web solutions. Currently seeking my next challenge as an Associate Software Engineer.",
+
+  keywords: [
+    "Web Developer",
+    "Associate Software Engineer",
+    "Next.js",
+    "React",
+    "Portfolio",
+  ],
+
   authors: [{ name: "Keshara Ranasinghe" }],
+
   openGraph: {
     title: "Keshara Ranasinghe | Web Developer | Portfolio",
     description: "Explore my work and experience in software engineering.",
