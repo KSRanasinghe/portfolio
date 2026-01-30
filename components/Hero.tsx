@@ -1,18 +1,19 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
-import { FaArrowDown, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const WordRoller = dynamic(() => import('@/components/animations/WordRoller'), {
   ssr: false,
 });
 
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <section id="about"
-      className="relative min-h-screen w-full flex items-center justify-center py-15 md:py-28 px-4 md:px-10 xl:px-4 bg-cover bg-position-[65%_center] lg:bg-center bg-no-repeat bg-fixed" style={{ backgroundImage: "url('/hero-bg.avif')" }}>
+      className="relative min-h-screen w-full flex items-center justify-center py-15 md:py-28 px-4 md:px-10 xl:px-4 bg-cover bg-position-[65%_center] lg:bg-center bg-no-repeat bg-fixed" style={{ backgroundImage: `url(${basePath}/hero-bg.avif)` }}>
       <div className="absolute inset-0 bg-background/50" />
 
       <div className="relative z-10 xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto min-h-screen flex items-center">

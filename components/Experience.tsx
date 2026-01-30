@@ -27,6 +27,8 @@ const experiences = [
 
 
 export default function Experience() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <section id="experience" className="w-full py-10 md:py-20 xl:py-35 px-4 md:px-10 xl:px-4">
       <div className="xl:max-w-6xl 2xl:max-w-7xl w-full mx-auto">
@@ -37,7 +39,7 @@ export default function Experience() {
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
           <div className="hidden xl:flex xl:col-span-5 accent-text">
             <DotLottiePlayer
-              src="/developer.json"
+              src={`${basePath}/developer.json`}
               autoplay
               loop
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-150"
