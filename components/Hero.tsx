@@ -42,6 +42,7 @@ export default function Hero() {
               </Link>
               <Link
                 href="/Keshara_Ranasinghe.pdf"
+                prefetch={false}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 md:px-8 md:py-4 border border-primary/40 text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-300"
