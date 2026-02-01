@@ -17,11 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_PATH
-      ? "https://ksranasinghe.github.io/portfolio"
-      : "http://localhost:3000"
-  ),
+  metadataBase: new URL("https://kesharasr.vercel.app"),
 
   title: "Keshara Ranasinghe | Web Developer | Portfolio",
   description:
@@ -40,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Keshara Ranasinghe | Web Developer | Portfolio",
     description: "Explore my work and experience in software engineering.",
-    url: "https://ksranasinghe.github.io/portfolio/",
+    url: "https://kesharasr.vercel.app/",
     siteName: "Keshara Ranasinghe",
     images: [
       {
