@@ -42,23 +42,9 @@
 @layer base {
   body {
     @apply bg-background text-foreground;
-
-    cursor: none;
-  }
-
-  a,
-  button,
-  [role="button"] {
-    cursor: none;
   }
 
   img {
     isolation: isolate;
-  }
-}
-
-@media (pointer: coarse) {
-  .custom-cursor {
-    display: none !important;
   }
 }
