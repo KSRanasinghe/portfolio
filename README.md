@@ -16,4 +16,4 @@ It showcases my work, skills, and experience as a Web Developer.
 - Optimized for performance and accessibility
 
 ## Live Demo
-👉 [https://ksranasinghe.github.io/portfolio/](http://kesharasr.vercel.app/)
+👉 [https://kesharasr.vercel.app/](https://kesharasr.vercel.app/)
