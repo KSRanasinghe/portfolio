@@ -48,3 +48,9 @@
     isolation: isolate;
   }
 }
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
