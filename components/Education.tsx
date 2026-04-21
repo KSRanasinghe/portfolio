@@ -7,21 +7,21 @@ const education = [
     institution: "IIC University of Technology, Cambodia",
     degree: "B. Eng. (Hons) in Software Engineering",
     period: "2021 — 2025",
-    result: "GPA - 2.52",
+    desc: "Earned a Bachelor of Engineering in Software Engineering through Java Institute (Sri Lanka), affiliated with IIC University of Technology. Focused on software architecture, database management, and modern development methodologies.",
     icon: FaGraduationCap,
   },
   {
     institution: "Esoft Metro Campus, Sri Lanka",
     degree: "Dip. in Information Technology (Pearson Assured)",
     period: "2019 — 2020",
-    result: "Completed",
+    desc: "Completed a Pearson Assured Diploma, gaining a solid foundation in computer science principles and technical workflows.",
     icon: FaAward,
   },
   {
     institution: "Bandaranayake College - Gampaha, Sri Lanka",
     degree: "G.C.E. Advanced Level - Biological Science",
     period: "2017 — 2020",
-    result: "2Cs & 1S",
+    desc: "Completed secondary education in the Biological Science stream, which helped develop strong analytical and logical thinking skills.",
     icon: FaAward,
   },
 ]
@@ -55,7 +55,7 @@ export default function Education() {
                     <p className="text-muted-foreground">{edu.institution}</p>
                   </div>
                   <div className="pt-4 border-t border-border/50 space-y-2">
-                    <p className="text-sm text-accent font-medium accent-text">{edu.result}</p>
+                    <p className="text-sm text-muted-foreground font-normal tracking-wide leading-6">{edu.desc}</p>
                   </div>
                 </div>
               </div>

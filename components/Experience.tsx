@@ -10,17 +10,17 @@ const experiences = [
     role: "Web Developer",
     period: "2025-07 — Present",
     description:
-      "Delivered front-end solutions for website revamps, including responsive UI components and homepage rebuilds. Integrated dynamic content via a custom CMS, ensured cross-browser compatibility, and supported releases through manual QA.",
-    technologies: ["HTML5", "SCSS", "Tailwind", "JavaScript", "Bootstrap", "PHP"],
+      "Responsible for developing and optimizing frontend interfaces for production web systems. I focus on creating responsive, SEO-friendly layouts using HTML5 and CSS3, while ensuring pixel-perfect design implementation and cross-browser compatibility. Additionally, I utilize JavaScript and PHP for dynamic site functionalities and support the quality assurance process for live releases.",
+    technologies: ["HTML5", "SCSS", "CSS3", "JavaScript", "PHP", "Bootstrap", "Responsive Design"],
     logo: "D",
   },
   {
     company: "Dimensions-IT",
-    role: "Junior Web Developer",
+    role: "Trainee Web Developer",
     period: "2024-12 — 2025-06",
     description:
-      "Supported modernization of legacy web applications by rebuilding front-end layers on existing systems. Transformed outdated and CMS-driven pages into responsive, standards-compliant, and SEO-friendly interfaces in production environments.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP"],
+      "Assisted in modernizing legacy web applications by rebuilding frontend layers for enhanced responsiveness and performance. Successfully converted outdated, static pages into SEO-friendly, standards-compliant interfaces while working closely with senior developers in a professional production workflow.",
+    technologies: ["JavaScript", "HTML5", "CSS3", "PHP", "Bootstrap", "SEO Optimization"],
     logo: "D",
   },
 ]
