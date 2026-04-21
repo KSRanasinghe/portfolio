@@ -5,6 +5,7 @@ import { motion, useSpring, useMotionValue } from "framer-motion";
 
 const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
@@ -14,6 +15,14 @@ const CustomCursor = () => {
   const cursorY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(pointer: coarse)").matches);
+    };
+
+    checkMobile();
+
+    if (isMobile) return;
+
     const moveMouse = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -23,9 +32,7 @@ const CustomCursor = () => {
     const handleHoverEnd = () => setIsHovered(false);
 
     window.addEventListener("mousemove", moveMouse);
-
     const targets = document.querySelectorAll("a, button, .hover-target");
-
     targets.forEach((t) => {
       t.addEventListener("mouseenter", handleHoverStart);
       t.addEventListener("mouseleave", handleHoverEnd);
@@ -38,7 +45,9 @@ const CustomCursor = () => {
         t.removeEventListener("mouseleave", handleHoverEnd);
       });
     };
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <motion.div
@@ -46,7 +55,7 @@ const CustomCursor = () => {
       style={{
         translateX: cursorX,
         translateY: cursorY,
-        left: -6, 
+        left: -6,
         top: -6,
         backgroundColor: "white",
       }}
