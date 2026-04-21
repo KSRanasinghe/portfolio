@@ -31,7 +31,7 @@ export default function Hero() {
                 Transforming complex requirements into seamless, high-performance web interfaces.
               </p>
             </div>
-            <p className="text-foreground/80 text-[16px] md:text-xl leading-relaxed 2xl:pr-3 text-center hero-reveal">I&apos;m a Web Developer currently building end-to-end web applications with a focus on clean design, solid backend logic, and performance. I&apos;m deepening my skills in the modern JavaScript ecosystem and actively seeking my next opportunity as an Associate Software Engineer.</p>
+            <p className="text-foreground/80 text-[16px] md:text-xl leading-relaxed 2xl:pr-3 text-center hero-reveal">I&apos;m a Web Developer currently building end-to-end web applications with a focus on clean design, solid backend logic, and performance. I&apos;m deepening my skills in the modern JavaScript ecosystem and actively seeking a role where I can grow as a Software Engineer and contribute to meaningful technical projects.</p>
             <div className="flex items-center justify-center gap-4 md:gap-6 hero-reveal">
               <Link
                 href="#contact"
@@ -39,7 +39,7 @@ export default function Hero() {
               >
                 <span className="relative z-10">Let&apos;s Connect</span>
               </Link>
-              <Link
+              {/* <Link
                 href="/Keshara_Ranasinghe.pdf"
                 prefetch={false}
                 target="_blank"
@@ -47,7 +47,7 @@ export default function Hero() {
                 className="px-5 py-3 md:px-8 md:py-4 border border-primary/40 text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-300"
               >
                 View CV
-              </Link>
+              </Link> */}
             </div>
             <div className="flex items-center justify-center gap-4 pt-1 hero-reveal">
               <Link

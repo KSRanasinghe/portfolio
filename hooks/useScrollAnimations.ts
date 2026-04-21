@@ -26,7 +26,7 @@ export const useScrollAnimations = () => {
         {
           opacity: 1, y: 0,
           duration: 1, ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse", }
+          scrollTrigger: { trigger: el, start: "top 90%", once: true, }
         }
       );
     });
@@ -38,7 +38,7 @@ export const useScrollAnimations = () => {
         {
           opacity: 1, y: 0,
           duration: 1, ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse", }
+          scrollTrigger: { trigger: el, start: "top 90%", once: true, }
         }
       );
     });
@@ -51,7 +51,7 @@ export const useScrollAnimations = () => {
         {
           opacity: 1, y: 0,
           duration: 0.8, stagger: 0.2, ease: "power2.out",
-          scrollTrigger: { trigger: container, start: "top 85%", toggleActions: "play none none reverse", }
+          scrollTrigger: { trigger: container, start: "top 85%", once: true, }
         }
       );
     });
